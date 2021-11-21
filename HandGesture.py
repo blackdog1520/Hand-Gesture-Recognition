@@ -22,18 +22,7 @@ np.random.seed(1)
 # In[2]:
 
 
-from google.colab import drive
-drive.mount('/content/drive')
 
-
-# In[ ]:
-
-
-import sys
-sys.path.append('/content/drive/My Drive/Colab Notebooks')
-
-
-# In[ ]:
 
 
 import cnn_utils
@@ -42,11 +31,11 @@ import cnn_utils
 # In[ ]:
 
 
-train_dataset = h5py.File('/content/drive/My Drive/Colab Notebooks/train_signs.h5', "r")
+train_dataset = h5py.File('/train_signs.h5', "r")
 train_set_x_orig = np.array(train_dataset["train_set_x"][:]) #train set 
 train_set_y_orig = np.array(train_dataset["train_set_y"][:]) #train set labels
 
-test_dataset = h5py.File('/content/drive/My Drive/Colab Notebooks/test_signs.h5', "r")
+test_dataset = h5py.File('/test_signs.h5', "r")
 test_set_x_orig = np.array(test_dataset["test_set_x"][:]) #test set
 test_set_y_orig = np.array(test_dataset["test_set_y"][:]) # test set labels
 
